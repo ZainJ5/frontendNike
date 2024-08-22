@@ -238,7 +238,7 @@ export default function Checkout() {
                                             {cart.map((item, index) => {
                                                 return (
                                                     <div key={index} className='flex items-center mb-4 pb-4 border-b'>
-                                                        <img src={`${process.env.REACT_APP_API_URL}/${item.shoeImage}`} alt={item.shoeName} className='w-20 h-20 object-cover mr-4 rounded-md' />
+                                                        <img src={`${process.env.REACT_APP_API_URL}/public/images/${item.shoeImage}`}alt={item.shoeName} className='w-20 h-20 object-cover mr-4 rounded-md' />
                                                         <div className='flex-grow'>
                                                             <h3 className='font-semibold '>{item.shoeName}</h3>
                                                             <p className='text-[#f0f0f0] text-sm'>Category: {item.shoeCategory}</p>
