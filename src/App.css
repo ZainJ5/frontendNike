@@ -1,0 +1,207 @@
+body {
+    background-color: #1b212c;
+    font-family: Helvetica,Arial, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+.MainPage {
+    height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: minmax(60px, 10%) 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "sidebar nav"
+        "sidebar main"
+        "sidebar main";
+}
+
+.nav {
+    grid-area: nav;
+    min-height: 50px; 
+    height: 10vh;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    min-width: 60px; 
+}
+
+.bg {
+    padding: 0px 4px 0px 4px; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cg transform='rotate(-8 12 12)' opacity='0.7'%3E%3Cpath fill='%23BABCBF' fill-rule='evenodd' clip-rule='evenodd' d='M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 35%;
+    background-size: cover;
+    background-size: 130% 250%;
+}
+.bg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-position: left 35%;
+    background-size: cover;
+    background-size: 130% 250%;
+    filter: drop-shadow(4px 4px 5px rgb(255, 255, 255, 0.5));
+    z-index: -5;
+
+}
+.headings {
+    writing-mode: vertical-lr;
+    display: flex;
+}
+.image>img{
+    filter: drop-shadow(0px 12px 4px rgba(0, 0, 0, 0.5));
+}
+.headings > h1 {
+    padding: 5px;
+    transform: rotate(180deg);
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: #FB4B29;
+}
+
+.logo {
+    align-self: flex-start;
+    margin-left: -10px;
+}
+@media (max-width: 1230px) {
+    .image>img{
+        width: 100%;
+        height: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .MainPage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "nav"
+            "main"
+            "sidebar";
+    }
+    .cart{
+       padding-right: 0px;
+    }
+    .image>img{
+        width: 60%;
+        height: 100%;
+    }
+    .bg {
+    background-position: 29% 54%;
+    }
+    .bg::before{
+        background-position: 29% 54%;
+    }
+    .card{
+        overflow: visible;
+        padding-left: 12px;
+    }
+    .text{
+        align-items: end;
+    }
+    .text>span{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .sidebar {
+        min-width: 100%; 
+        flex-direction: row;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .socialicons {
+        display: flex;
+        padding-top: 14px;
+    }
+
+    .socialicons > a {
+        padding: 4px;
+    }
+
+    .headings {
+        writing-mode: horizontal-tb;
+    }
+
+    .headings > h1 {
+        padding: 10px;
+        transform: rotate(0deg);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav, .bg, .sidebar {
+        width: 100%;
+    }
+}
+@media (max-width:1022px) {
+    .span{
+        align-self: flex-end;
+    }
+    .bg{
+        background-position: 30% 50%;
+    }
+    .bg::before{
+        background-position: 30% 50%;
+    }
+}
+@media (max-width: 663px) {
+    .bg{
+        background-position: 50% 55%;
+        }
+        .bg::before{
+            background-position: 50% 55%;
+            }
+        }
+        @media (max-width: 479px) {
+            .bg{
+                background-position: 70% 60%;
+                }
+                .bg::before{
+                    background-position: 70% 60%;
+                    }
+                }
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
