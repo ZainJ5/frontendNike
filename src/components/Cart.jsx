@@ -17,7 +17,7 @@ export default function Cart(props) {
         <div className='w-full bg-[#374151] rounded-md text-white font-poppins p-4 mb-4'>
             <div className="flex flex-col sm:flex-row">
                 <div className="img w-full sm:w-[30%] flex items-center justify-center mb-4 sm:mb-0">
-                    <img className='w-[60%] sm:w-[70%] max-w-[150px]' src={`${process.env.REACT_APP_API_URL}/${props.shoe.shoeImage}`} alt="Shoe" />
+                    <img className='w-[60%] sm:w-[70%] max-w-[150px]' src={props.shoe.shoeImage} alt="Shoe" />
                 </div>
                 <div className="side w-full sm:w-[70%] flex flex-col justify-between sm:px-5">
                     <div className='flex flex-col sm:flex-row justify-between mb-2 sm:mb-0'>

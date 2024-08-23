@@ -84,7 +84,7 @@ export default function Menshoes(props) {
             <div className="shoeCard bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 h-full flex flex-col">
                 <div className='relative overflow-hidden group flex-shrink-0'>
                     <img 
-                        src={`${process.env.REACT_APP_API_URL}/${shoeImage}`} 
+                        src={shoeImage} 
                         alt={shoeName} 
                         className='w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110'
                     />

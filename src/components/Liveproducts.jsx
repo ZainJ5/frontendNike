@@ -50,7 +50,7 @@ export default function Liveproducts() {
                     products.map((product, index) => (
                         <div key={index} className="flex flex-col sm:flex-row sm:h-[50%] bg-[#36445f] rounded-lg shadow-lg overflow-hidden">
                             <div className="w-full sm:w-1/3 h-32 sm:h-full">
-                                <img src={`${process.env.REACT_APP_API_URL}/${product.shoeImage}`} alt={product.shoeName} className="w-full h-full object-cover" />
+                                <img src={product.shoeImage} alt={product.shoeName} className="w-full h-full object-cover" />
                             </div>
                             <div className="p-4 flex flex-col justify-between flex-grow">
                                 <div>

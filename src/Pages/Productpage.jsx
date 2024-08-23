@@ -83,7 +83,7 @@ export default function Productpage() {
                 <div className="shadow-lg rounded-lg overflow-hidden">
                     <div className="md:flex rounded-md justify-center">
                         <div className='md:w-1/2 flex sm:rounded-l-lg overflow-hidden justify-center items-center bg-white'>
-                            <img src={`${process.env.REACT_APP_API_URL}/${first.shoeImage}`} alt="ProductImage" className="w-full object-cover min-w-full" />
+                            <img src={first.shoeImage} alt="ProductImage" className="w-full object-cover min-w-full" />
                         </div>
                         <div className='md:w-[40%] bg-[#2d3748] sm:rounded-r-lg text-white p-8'>
                             <h1 className='text-3xl font-bold mb-4'>{first.shoeName}</h1>
